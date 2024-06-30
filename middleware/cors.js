@@ -11,7 +11,7 @@ const configureMiddleware = (app) => {
         "https://server-pemograman.vercel.app",
         "http://127.0.0.1:5501",
         "http://localhost:8089",
-        "https://kostsplayer.github.io",
+        "https://ayala-crea.github.io",
       ],
       methods: ["GET", "POST", "PUT", "OPTIONS", "DELETE"],
       credentials: true,

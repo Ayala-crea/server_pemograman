@@ -31,7 +31,7 @@ exports.register = async (req, res) => {
     }
 
     const userId = data[0].id;
-    return res.status(201).json({ success: true, userId, data });
+    return res.status(201).json({ success: true, message: "Berhasil Register!" , userId, data });
   } catch (error) {
     return res.status(500).json({ success: false, message: error.message });
   }

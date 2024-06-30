@@ -4,7 +4,8 @@ const supabase = require("../config/db.js");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs"); // Ensure bcrypt is imported
 const configureMiddleware = require('../middleware/cors.js');
-app.use(configureMiddleware);
+// Terapkan middleware CORS dan lainnya
+configureMiddleware(app);
 
 exports.register = async (req, res) => {
   const { full_name, nickname, email, phone_number, password } = req.body;

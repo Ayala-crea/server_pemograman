@@ -1,12 +1,13 @@
-const express =  require("express");
+// middleware/cors.js
+
 const cors = require("cors");
 const bodyParser = require("body-parser");
 
-exports.configureMiddleware = (app) => {
+const configureMiddleware = (app) => {
   app.use(
     cors({
       origin: [
-        "https://server-pemograman.vercel.app/",
+        "https://server-pemograman.vercel.app",
         "http://127.0.0.1:5500",
         "http://localhost:8089",
         "https://kostsplayer.github.io",
@@ -20,3 +21,5 @@ exports.configureMiddleware = (app) => {
   app.use(express.json());
   app.use(bodyParser.urlencoded({ extended: true }));
 };
+
+module.exports = configureMiddleware;

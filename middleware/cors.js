@@ -6,7 +6,7 @@ const configureMiddleware = (app) => {
   app.use(
     cors({
       origin: [
-        "https://shopionz.vercel.app",
+        "https://server-pemograman.vercel.app/",
         "http://localhost:5173",
         "http://localhost:8089",
         "https://kostsplayer.github.io",

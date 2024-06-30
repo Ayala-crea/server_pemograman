@@ -15,6 +15,7 @@ const port = process.env.APP_PORT || 5001;
 
 app.listen(port, async () => {
   console.log(`Running server on port ${port}`);
+  console.log(process.env.SUPABASE_KEY)
   
   // Check database connection
   const { error } = await supabase.from('users').select('id').limit(1);

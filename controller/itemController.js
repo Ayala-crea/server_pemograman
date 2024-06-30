@@ -55,12 +55,12 @@ exports.getItem = async (req, res) => {
 };
 
 exports.getItemById = async (req, res) => {
-  const { id_item } = req.params;
+  const { id_items } = req.params;
   try {
     const { data, error } = await supabase
       .from("items")
       .select("*")
-      .eq("id_item", id_item);
+      .eq("id_items", id_items);
     if (error) {
       return res.json(error.message);
     }
@@ -72,12 +72,12 @@ exports.getItemById = async (req, res) => {
 };
 
 exports.deleteItem = async (req, res) => {
-  const { id_item } = req.params;
+  const { id_items } = req.params;
   try {
     const { data, error } = await supabase
       .from("items")
       .delete()
-      .eq("id_item", id_item);
+      .eq("id_items", id_items);
     if (errorProduct) {
       return res.json(error.message);
     }

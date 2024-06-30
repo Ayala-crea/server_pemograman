@@ -1,8 +1,8 @@
-import express from "express";
-import cors from "cors";
-import bodyParser from "body-parser";
+const express =  require("express");
+const cors = require("cors");
+const bodyParser = require("body-parser");
 
-const configureMiddleware = (app) => {
+exports.configureMiddleware = (app) => {
   app.use(
     cors({
       origin: [
@@ -20,5 +20,3 @@ const configureMiddleware = (app) => {
   app.use(express.json());
   app.use(bodyParser.urlencoded({ extended: true }));
 };
-
-export default configureMiddleware;

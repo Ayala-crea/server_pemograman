@@ -7,7 +7,7 @@ const configureMiddleware = (app) => {
     cors({
       origin: [
         "https://server-pemograman.vercel.app/",
-        "http://localhost:5173",
+        "http://localhost:5500",
         "http://localhost:8089",
         "https://kostsplayer.github.io",
       ],

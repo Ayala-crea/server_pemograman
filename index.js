@@ -8,7 +8,8 @@ const configureMiddleware = require('./middleware/cors.js');
 
 app.use(express.json());
 
-app.use(configureMiddleware);
+// Terapkan middleware CORS dan lainnya
+configureMiddleware(app);
 
 app.use(authRoutes);
 app.use(itemRoutes);

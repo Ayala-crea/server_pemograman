@@ -1,6 +1,10 @@
+const express = require("express");
+const app = express();
 const supabase = require("../config/db.js");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs"); // Ensure bcrypt is imported
+const configureMiddleware = require('../middleware/cors.js');
+configureMiddleware(app);
 
 exports.register = async (req, res) => {
   const { full_name, nickname, email, phone_number, password } = req.body;

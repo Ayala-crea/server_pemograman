@@ -1,4 +1,8 @@
+const express = require("express");
+const app = express();
 const supabase = require("../config/db.js");
+const configureMiddleware = require('../middleware/cors.js');
+configureMiddleware(app);
 
 exports.createItem = async (req, res) => {
   const { name, description, price, quantity, category } = req.body;

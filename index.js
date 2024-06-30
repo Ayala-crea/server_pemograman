@@ -8,7 +8,7 @@ const configureMiddleware = require('./middleware/cors.js');
 
 app.use(express.json());
 
-app.use(configureMiddleware);
+app.use(configureMiddleware());
 
 app.use(authRoutes);
 app.use(itemRoutes);

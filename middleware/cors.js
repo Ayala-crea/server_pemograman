@@ -9,7 +9,7 @@ const configureMiddleware = (app) => {
     cors({
       origin: [
         "https://server-pemograman.vercel.app",
-        "http://127.0.0.1:5501",
+        "http://127.0.0.1:5500",
         "http://localhost:8089",
         "https://ayala-crea.github.io",
       ],

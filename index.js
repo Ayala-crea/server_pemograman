@@ -4,6 +4,8 @@ const app = express();
 const supabase = require('./config/db.js'); // Import supabase for the connection check
 const authRoutes = require('./routes/authRoutes.js');
 const itemRoutes = require('./routes/itemRoutes.js');
+const categoryRoutes = require('./routes/categoryRoutes.js');
+const orderRoutes = require('./routes/orderRoutes.js');
 const configureMiddleware = require('./middleware/cors.js');
 
 app.use(express.json());
@@ -13,6 +15,8 @@ configureMiddleware(app);
 
 app.use(authRoutes);
 app.use(itemRoutes);
+app.use(categoryRoutes);
+app.use(orderRoutes);
 
 const port = process.env.APP_PORT || 5001;
 

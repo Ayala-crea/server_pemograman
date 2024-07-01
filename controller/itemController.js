@@ -90,3 +90,21 @@ exports.deleteItem = async (req, res) => {
     return res.json(error);
   }
 };
+exports.updateItem = async (req, res) => {
+  const { id_items } = req.params;
+  const { name, description, price, quantity, category } = req.body;
+  try {
+    const { data, error } = await supabase
+      .from("items")
+      .update({ name, description, price, quantity, category_id: category })
+      .eq("id_items", id_items)
+      .select("*");
+    if (error) {
+      return res.json(error.message);
+    }
+    return res.json({ data, message: "Update menu successfully!" });
+  } catch (error) {
+    return res.json(error);
+  }
+};
+

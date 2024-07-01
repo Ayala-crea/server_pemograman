@@ -82,7 +82,7 @@ exports.deleteItem = async (req, res) => {
       return res.json(error.message);
     }
 
-    return res.json({
+    return res.status(200).json({
       data: data,
       message: "Delete product successfully!",
     });

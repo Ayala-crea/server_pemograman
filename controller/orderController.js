@@ -7,7 +7,7 @@ configureMiddleware(app);
 
 exports.createOrder = async (req, res) => {
   const { id_items, quantitiy_order } = req.body;
-  let id_pengguna = req.users.id;
+  let id_pengguna = req.userId;
   try {
     const { data, error } = await supabase
       .from("Order")
